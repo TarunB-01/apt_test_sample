@@ -1,0 +1,17 @@
+<!-- nmap_form.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nmap Scan Form</title>
+</head>
+<body>
+    <h2>Nmap Scan Form</h2>
+    <form method="post" action="{% url 'nmap_scan' %}">
+        {% csrf_token %}
+        <label for="target">Target:</label>
+        <input type="text" id="target" name="target" required>
+        <button type="submit">Scan</button>
+    </form>
+</body>
+</html>
